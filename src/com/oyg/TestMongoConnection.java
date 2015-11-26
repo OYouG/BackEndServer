@@ -59,6 +59,18 @@ public class TestMongoConnection
             coll.insert(doc);
 
         }
+
+
+    }
+
+    public void printWeeklyGrosses() {
+        DBCollection coll = db.getCollection("weeklyGrosses");
+        DBCursor cursor = coll.find();
+        System.out.println("Weekly Grosses:");
+        while (cursor.hasNext())
+        {
+            System.out.println(cursor.next());
+        }
         mongoClient.close();
     }
 }

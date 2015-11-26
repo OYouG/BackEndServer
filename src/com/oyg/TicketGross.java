@@ -8,10 +8,11 @@ import java.util.Date;
 public class TicketGross {
 
     private String name;
+    private long gross;
     private long attendance;
     private Date startDate; // should we use Date class/type // also should we even be storing a start date
     private Date endDate;
-    private long gross;
+
 
     public TicketGross(String name, long gross, long attendance, Date startDate, Date endDate) {
         this.name = name;
