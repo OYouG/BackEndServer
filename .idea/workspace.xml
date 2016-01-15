@@ -8,16 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59a31806-e124-4a55-8148-98d6dbe9810a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/poi_3_13_20150929.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/poi_ooxml_3_13_20150929.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/poi_ooxml_schemas_3_13_20150929.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/xmlbeans_2_6_0.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BackEndServer/com/oyg/TestMongoConnection.class" afterPath="$PROJECT_DIR$/out/production/BackEndServer/com/oyg/TestMongoConnection.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BackEndServer/com/oyg/rest/GetTicketGrosses.class" afterPath="$PROJECT_DIR$/out/production/BackEndServer/com/oyg/rest/GetTicketGrosses.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BackEndServer/com/oyg/worker/TicketGrossesProcessor.class" afterPath="$PROJECT_DIR$/out/production/BackEndServer/com/oyg/worker/TicketGrossesProcessor.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BackEndServer.iml" afterPath="$PROJECT_DIR$/BackEndServer.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oyg/TestMongoConnection.java" afterPath="$PROJECT_DIR$/src/com/oyg/TestMongoConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oyg/rest/GetSproutData.java" afterPath="$PROJECT_DIR$/src/com/oyg/rest/GetSproutData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oyg/rest/GetTicketGrosses.java" afterPath="$PROJECT_DIR$/src/com/oyg/rest/GetTicketGrosses.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oyg/worker/TicketGrossesProcessor.java" afterPath="$PROJECT_DIR$/src/com/oyg/worker/TicketGrossesProcessor.java" />
     </list>
     <ignored path="BackEndServer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,8 +47,8 @@
       <file leaf-file-name="GetTicketGrosses.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/oyg/rest/GetTicketGrosses.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8186275">
-              <caret line="211" column="38" selection-start-line="211" selection-start-column="38" selection-end-line="211" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.41421568">
+              <caret line="200" column="40" selection-start-line="200" selection-start-column="40" selection-end-line="200" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -823,7 +817,7 @@
       <workItem from="1452228980001" duration="366000" />
       <workItem from="1452721032185" duration="443000" />
       <workItem from="1452879889849" duration="629000" />
-      <workItem from="1452880839019" duration="7733000" />
+      <workItem from="1452880839019" duration="8122000" />
     </task>
     <task id="LOCAL-00001" summary="Added &quot;printWeeklyGrosses()&quot; function to attempt to access data from our &quot;weeklyGrosses&quot; collection in our mongodb.">
       <created>1448502746512</created>
@@ -843,11 +837,17 @@
       <option name="project" value="LOCAL" />
       <updated>1452886690379</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added Apache POI Excel File reader libraries; added started code for reading an excel file; code must still be modified further to process file properly for each line.">
+      <created>1452890432885</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1452890432885</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44391000" />
+    <option name="totallyTimeSpent" value="44780000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -904,7 +904,8 @@
     <MESSAGE value="Added &quot;printWeeklyGrosses()&quot; function to attempt to access data from our &quot;weeklyGrosses&quot; collection in our mongodb." />
     <MESSAGE value="Set up new class ClientTicketGross in preparation for sending over objects to front end; also fixed up TicketGross data (removed startDate attribute); and then added more dummy data." />
     <MESSAGE value="Created a new class SproutDailySummary for storing our Sprout data. Created file GetSproutData to read in Sprout CSV files." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created a new class SproutDailySummary for storing our Sprout data. Created file GetSproutData to read in Sprout CSV files." />
+    <MESSAGE value="Added Apache POI Excel File reader libraries; added started code for reading an excel file; code must still be modified further to process file properly for each line." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Apache POI Excel File reader libraries; added started code for reading an excel file; code must still be modified further to process file properly for each line." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1371,8 +1372,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oyg/rest/GetTicketGrosses.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8186275">
-          <caret line="211" column="38" selection-start-line="211" selection-start-column="38" selection-end-line="211" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.41421568">
+          <caret line="200" column="40" selection-start-line="200" selection-start-column="40" selection-end-line="200" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
