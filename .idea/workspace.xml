@@ -8,9 +8,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59a31806-e124-4a55-8148-98d6dbe9810a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BackEndServer/com/oyg/TestMongoConnection.class" afterPath="$PROJECT_DIR$/out/production/BackEndServer/com/oyg/TestMongoConnection.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BackEndServer/com/oyg/rest/GetTicketGrosses.class" afterPath="$PROJECT_DIR$/out/production/BackEndServer/com/oyg/rest/GetTicketGrosses.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BackEndServer/com/oyg/worker/TicketGrossesProcessor.class" afterPath="$PROJECT_DIR$/out/production/BackEndServer/com/oyg/worker/TicketGrossesProcessor.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyUpcomingEvents_20160108_154954.xls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/poi-3.13-20150929.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/poi-ooxml-3.13-20150929.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/poi-ooxml-schemas-3.13-20150929.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libs/xmlbeans-2.6.0.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/groupCSV-12-28-2015---01-11-2016.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="BackEndServer.iws" />
@@ -817,7 +821,7 @@
       <workItem from="1452228980001" duration="366000" />
       <workItem from="1452721032185" duration="443000" />
       <workItem from="1452879889849" duration="629000" />
-      <workItem from="1452880839019" duration="8122000" />
+      <workItem from="1452880839019" duration="8285000" />
     </task>
     <task id="LOCAL-00001" summary="Added &quot;printWeeklyGrosses()&quot; function to attempt to access data from our &quot;weeklyGrosses&quot; collection in our mongodb.">
       <created>1448502746512</created>
@@ -843,11 +847,17 @@
       <option name="project" value="LOCAL" />
       <updated>1452890432885</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Adding Apache libraries to git since last push did not work">
+      <created>1452890779778</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1452890779779</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44780000" />
+    <option name="totallyTimeSpent" value="44943000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -905,7 +915,8 @@
     <MESSAGE value="Set up new class ClientTicketGross in preparation for sending over objects to front end; also fixed up TicketGross data (removed startDate attribute); and then added more dummy data." />
     <MESSAGE value="Created a new class SproutDailySummary for storing our Sprout data. Created file GetSproutData to read in Sprout CSV files." />
     <MESSAGE value="Added Apache POI Excel File reader libraries; added started code for reading an excel file; code must still be modified further to process file properly for each line." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Apache POI Excel File reader libraries; added started code for reading an excel file; code must still be modified further to process file properly for each line." />
+    <MESSAGE value="Adding Apache libraries to git since last push did not work" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding Apache libraries to git since last push did not work" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
