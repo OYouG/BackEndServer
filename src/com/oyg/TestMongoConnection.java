@@ -50,7 +50,7 @@ public class TestMongoConnection
     public void insertGrossesData(List<TicketGross> grossesFromServer) {
         //$TODO$ replicate insertARecord. insert the grosses from server instead.
         DBCollection coll = db.getCollection("weeklyGrosses");
-        grossesFromServer = new GetTicketGrosses().getGrossesFromServer("date");
+        //grossesFromServer = new GetTicketGrosses().getGrossesFromServer("date");
         for (TicketGross ticketGross : grossesFromServer) {
             BasicDBObject doc = new BasicDBObject("playName", ticketGross.getPlayName())
                     .append("weekendDate",ticketGross.getWeekendDate())

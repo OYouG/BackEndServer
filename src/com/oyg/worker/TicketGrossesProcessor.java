@@ -14,10 +14,10 @@ public class TicketGrossesProcessor {
 
     public TicketGrossesProcessor() {
         //List<TicketGross> grossesFromServer = new GetTicketGrosses().getGrossesFromServer(new Date(System.currentTimeMillis()), null);
-        List<TicketGross> grossesFromServer = new GetTicketGrosses().getGrossesFromServer(null);
+        /*List<TicketGross> grossesFromServer = new GetTicketGrosses().getGrossesFromServer(null);
         TestMongoConnection conn = new TestMongoConnection();
         conn.insertGrossesData(grossesFromServer);
-        conn.printWeeklyGrosses();
+        conn.printWeeklyGrosses();*/
 
 
     }
