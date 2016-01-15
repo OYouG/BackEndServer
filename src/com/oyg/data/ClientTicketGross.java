@@ -6,22 +6,22 @@ import java.util.Date;
  * Created by msllavore on 11/29/15.
  */
 public class ClientTicketGross {
-    private String name;
+    private String playName;
     private long gross;
-    private Date date;
+    private Date weekendDate;
 
     public ClientTicketGross(String name, long gross, Date date) {
-        this.name = name;
+        this.playName = name;
         this.gross = gross;
-        this.date = date;
+        this.weekendDate = date;
     }
 
-    public String getName() {
-        return name;
+    public String getPlayName() {
+        return playName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPlayName(String name) {
+        this.playName = name;
     }
 
     public long getGross() {
@@ -32,11 +32,11 @@ public class ClientTicketGross {
         this.gross = gross;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getWeekendDate() {
+        return weekendDate;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setWeekendDate(Date date) {
+        this.weekendDate = date;
     }
 }

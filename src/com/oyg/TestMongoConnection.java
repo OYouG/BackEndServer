@@ -52,10 +52,10 @@ public class TestMongoConnection
         DBCollection coll = db.getCollection("weeklyGrosses");
         grossesFromServer = new GetTicketGrosses().getGrossesFromServer("date");
         for (TicketGross ticketGross : grossesFromServer) {
-            BasicDBObject doc = new BasicDBObject("name", ticketGross.getName())
+            BasicDBObject doc = new BasicDBObject("playName", ticketGross.getPlayName())
+                    .append("weekendDate",ticketGross.getWeekendDate())
                     .append("gross", ticketGross.getGross())
-                    .append("attendance", ticketGross.getAttendance())
-                    .append("date",ticketGross.getDate());
+                    .append("attendance", ticketGross.getAttendance());
 
             coll.insert(doc);
         }
@@ -63,23 +63,13 @@ public class TestMongoConnection
     }
 
     public void printWeeklyGrosses() {
-        // FOR REFERENCE: accessing objects from mongo and printing to console
-        /*DBCollection coll = db.getCollection("weeklyGrosses");
-        DBCursor cursor = coll.find();
-        System.out.println("Weekly Grosses:");
-        while (cursor.hasNext())
-        {
-            System.out.println(cursor.next());
-        }
-        mongoClient.close();*/
-
         // creating objects from mongodb objects; to be passed onto front end
         List<DBObject> mongoObjects = new ArrayList<>(); // storing objects queried from mongodb
         List<ClientTicketGross> result = new ArrayList<>(); // creating list of objects to pass to front end
         BasicDBObject fields = new BasicDBObject(); // specifying fields we want to collect
-        fields.put("name", 1);
+        fields.put("playName", 1);
         fields.put("gross", 1);
-        fields.put("end date", 1);
+        fields.put("weekendDate", 1);
 
         DBCollection coll = db.getCollection("weeklyGrosses");
         DBCursor cursor = coll.find(null,fields);
@@ -91,8 +81,8 @@ public class TestMongoConnection
         // going through arraylist of mongoObjects and creating objects to pass to front end
         for (int i=0; i<mongoObjects.size(); i++)
         {
-            ClientTicketGross clientObject = new ClientTicketGross((String)(mongoObjects.get(i).get("name")),
-                    (long)(mongoObjects.get(i).get("gross")), (Date) mongoObjects.get(i).get("end date"));
+            ClientTicketGross clientObject = new ClientTicketGross((String)(mongoObjects.get(i).get("playName")),
+                    (long)(mongoObjects.get(i).get("gross")), (Date) mongoObjects.get(i).get("weekendDate"));
             result.add(clientObject);
         }
 
@@ -100,11 +90,13 @@ public class TestMongoConnection
         System.out.println("HELLO THESE ARE NOW CLIENT OBJECTS THAT WE WILL PASS ONTO FRONT END!!!");
         for (int i=0; i<result.size(); i++)
         {
-            System.out.println("Name: " + result.get(i).getName());
+            System.out.println("Play Name: " + result.get(i).getPlayName());
+            System.out.println("Weekend Date: " + result.get(i).getWeekendDate());
             System.out.println("Gross: " + result.get(i).getGross());
-            System.out.println("Date: " + result.get(i).getDate());
             System.out.println("Count: " + i );
         }
+
+
         mongoClient.close();
     }
 }

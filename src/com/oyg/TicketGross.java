@@ -8,22 +8,23 @@ import java.util.Date;
 public class TicketGross {
     /*$TODO$ spoke to frontenders: scrap the start date; assume that inputs will always
     correspond to those listed in ibdb; rename endDate to just date*/
-    private String name;
+    private String playName;
+    private Date weekendDate;
     private long gross;
     private long attendance;
-    private Date date; // should we use Date class/type // also should we even be storing a start date
 
 
-    public TicketGross(String name, long gross, long attendance, Date date) {
-        this.name = name;
+
+    public TicketGross(String playName, Date date, long gross, long attendance) {
+        this.playName = playName;
         this.gross = gross;
         this.attendance = attendance;
-        this.date = date;
+        this.weekendDate = date;
     }
 
-    public String getName() { return name; }
+    public String getPlayName() { return playName; }
 
-    public void setName(String name) { this.name = name; }
+    public void setPlayName(String name) { this.playName = name; }
 
     public long getGross() { return gross; }
 
@@ -33,8 +34,8 @@ public class TicketGross {
 
     public void setAttendance(long attendance) { this.attendance = attendance; }
 
-    public Date getDate() { return date; }
+    public Date getWeekendDate() { return weekendDate; }
 
-    public void setDate(Date date){ this.date = date; }
+    public void setWeekendDate(Date date){ this.weekendDate = date; }
 
 }
