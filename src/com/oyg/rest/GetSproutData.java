@@ -5,7 +5,10 @@ import java.io.FileReader;
 import java.io.IOException;
 
 import com.oyg.SproutDailySummary;
+
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -34,7 +37,16 @@ public class GetSproutData {
                 //Get all tokens available in line
                 String[] tokens = line.split(DELIMITER);
 
-                SproutDailySummary day = new SproutDailySummary(tokens[0], (tokens[1]), tokens[2], tokens[3], tokens[5], tokens[9], tokens[10], tokens[4], tokens[11], tokens[27], tokens[28], tokens[15], tokens[16], tokens[18]);
+                SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+                Date date = formatter.parse(tokens[0]);
+                //System.out.println(date);
+                //System.out.println(formatter.format(date));
+
+                SproutDailySummary day = new SproutDailySummary(date, Integer.valueOf(tokens[1]),
+                        Integer.valueOf(tokens[2]), Integer.valueOf(tokens[3]), Integer.valueOf(tokens[5]),
+                        Integer.valueOf(tokens[9]), Integer.valueOf(tokens[10]), Integer.valueOf(tokens[4]),
+                        Integer.valueOf(tokens[11]), Integer.valueOf(tokens[27]), Integer.valueOf(tokens[28]),
+                        Integer.valueOf(tokens[15]), Integer.valueOf(tokens[16]), Integer.valueOf(tokens[18]));
                 sproutData.add(day);
             }
             for (SproutDailySummary thing: sproutData)
