@@ -2,8 +2,11 @@ package com.oyg.worker;
 
 import com.oyg.TestMongoConnection;
 import com.oyg.TicketGross;
+import com.oyg.TicketMaster;
 import com.oyg.rest.GetTicketGrosses;
+import com.oyg.rest.GetTicketMasterData;
 
+import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 
@@ -24,5 +27,8 @@ public class TicketGrossesProcessor {
 
     public static void main(String[] args) {
         new TicketGrossesProcessor();
+
+        //List<TicketMaster> newTicketMasterData = new GetTicketMasterData().readTicketMasterFile();
+
     }
 }

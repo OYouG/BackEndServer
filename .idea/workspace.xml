@@ -8,10 +8,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59a31806-e124-4a55-8148-98d6dbe9810a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/MyUpcomingEvents_20160110_205950.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyUpcomingEvents_20160108_154954.xls" afterPath="$PROJECT_DIR$/MyUpcomingEvents_20160108_154954.xls" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MyUpcomingEvents_20160108_154954.xls" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MyUpcomingEvents_20160110_205950.xlsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/groupCSV-12-28-2015---01-11-2016.csv" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BackEndServer/com/oyg/worker/TicketGrossesProcessor.class" afterPath="$PROJECT_DIR$/out/production/BackEndServer/com/oyg/worker/TicketGrossesProcessor.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oyg/TicketMaster.java" afterPath="$PROJECT_DIR$/src/com/oyg/TicketMaster.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oyg/rest/GetTicketMasterData.java" afterPath="$PROJECT_DIR$/src/com/oyg/rest/GetTicketMasterData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oyg/worker/TicketGrossesProcessor.java" afterPath="$PROJECT_DIR$/src/com/oyg/worker/TicketGrossesProcessor.java" />
     </list>
     <ignored path="BackEndServer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,8 +41,8 @@
       <file leaf-file-name="GetTicketMasterData.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/oyg/rest/GetTicketMasterData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.8104575">
-              <caret line="86" column="38" selection-start-line="86" selection-start-column="38" selection-end-line="86" selection-end-column="38" />
+            <state vertical-scroll-proportion="1.8027211">
+              <caret line="53" column="6" selection-start-line="53" selection-start-column="6" selection-end-line="53" selection-end-column="6" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -50,7 +54,19 @@
         <entry file="file://$PROJECT_DIR$/src/com/oyg/TicketMaster.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+              <caret line="88" column="8" selection-start-line="88" selection-start-column="8" selection-end-line="88" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TicketGrossesProcessor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/oyg/worker/TicketGrossesProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,12 +100,12 @@
         <option value="$PROJECT_DIR$/out/artifacts/BackEndServer_war_exploded/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/com/oyg/data/ClientTicketGross.java" />
         <option value="$PROJECT_DIR$/src/com/oyg/rest/GetTicketMaster.java" />
-        <option value="$PROJECT_DIR$/src/com/oyg/worker/TicketGrossesProcessor.java" />
         <option value="$PROJECT_DIR$/src/com/oyg/TestMongoConnection.java" />
         <option value="$PROJECT_DIR$/src/com/oyg/rest/GetTicketGrosses.java" />
         <option value="$PROJECT_DIR$/src/com/oyg/TicketGross.java" />
         <option value="$PROJECT_DIR$/src/com/oyg/SproutDailySummary.java" />
         <option value="$PROJECT_DIR$/src/com/oyg/rest/GetSproutData.java" />
+        <option value="$PROJECT_DIR$/src/com/oyg/worker/TicketGrossesProcessor.java" />
         <option value="$PROJECT_DIR$/src/com/oyg/TicketMaster.java" />
         <option value="$PROJECT_DIR$/src/com/oyg/rest/GetTicketMasterData.java" />
       </list>
@@ -136,6 +152,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -238,32 +256,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BackEndServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BackEndServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="oyg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -830,7 +824,12 @@
       <workItem from="1452913223446" duration="8095000" />
       <workItem from="1452932740639" duration="1018000" />
       <workItem from="1452964337555" duration="11950000" />
-      <workItem from="1452984623758" duration="698000" />
+      <workItem from="1452984623758" duration="823000" />
+      <workItem from="1452985599771" duration="404000" />
+      <workItem from="1452986199868" duration="4096000" />
+      <workItem from="1452992357718" duration="3608000" />
+      <workItem from="1453181957653" duration="16000" />
+      <workItem from="1453260948723" duration="9417000" />
     </task>
     <task id="LOCAL-00001" summary="Added &quot;printWeeklyGrosses()&quot; function to attempt to access data from our &quot;weeklyGrosses&quot; collection in our mongodb.">
       <created>1448502746512</created>
@@ -880,11 +879,17 @@
       <option name="project" value="LOCAL" />
       <updated>1452982342787</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Using ss.usermodel instead of hssf.usermodel to read both xls and xlsx files, not just xls files.">
+      <created>1452985372658</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1452985372658</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68018000" />
+    <option name="totallyTimeSpent" value="85684000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -901,16 +906,16 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3025568" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30146083" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35325366" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30278885" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37715805" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22576362" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2140625" sideWeight="0.4943182" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14140625" sideWeight="0.4943182" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.284375" sideWeight="0.5056818" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -923,7 +928,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30810094" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3068182" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -947,11 +952,12 @@
     <MESSAGE value="Updated SproutDailySummary data types to use Date and ints instead of just Strings; also made changes to GetSproutData to convert tokens to the appropriate types." />
     <MESSAGE value="Updated SproutDailySummary data types to use Date and ints instead of just Strings; also made changes to GetSproutData.java to convert tokens to the appropriate types." />
     <MESSAGE value="Added TicketMaster.java for TicketMaster data; also added GetTicketMasterData.java for processing TicketMaster .xls files." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added TicketMaster.java for TicketMaster data; also added GetTicketMasterData.java for processing TicketMaster .xls files." />
+    <MESSAGE value="Using ss.usermodel instead of hssf.usermodel to read both xls and xlsx files, not just xls files." />
+    <option name="LAST_COMMIT_MESSAGE" value="Using ss.usermodel instead of hssf.usermodel to read both xls and xlsx files, not just xls files." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1247,31 +1253,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oyg/worker/TicketGrossesProcessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oyg/TestMongoConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="10" selection-start-line="52" selection-start-column="10" selection-end-line="52" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oyg/TicketGross.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.12713936">
           <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oyg/rest/GetTicketGrosses.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="14" selection-start-line="51" selection-start-column="14" selection-end-line="51" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -1299,17 +1284,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/groupCSV-12-28-2015---01-11-2016.csv">
+    <entry file="file://$PROJECT_DIR$/src/com/oyg/rest/GetTicketGrosses.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5263158">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.34235978">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oyg/TestMongoConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4578834">
+          <caret line="51" column="33" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33261338">
+          <caret line="234" column="18" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oyg/worker/TicketGrossesProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oyg/TicketMaster.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+          <caret line="88" column="8" selection-start-line="88" selection-start-column="8" selection-end-line="88" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1318,8 +1327,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oyg/rest/GetTicketMasterData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.8104575">
-          <caret line="86" column="38" selection-start-line="86" selection-start-column="38" selection-end-line="86" selection-end-column="38" />
+        <state vertical-scroll-proportion="1.8027211">
+          <caret line="53" column="6" selection-start-line="53" selection-start-column="6" selection-end-line="53" selection-end-column="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
