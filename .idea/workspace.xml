@@ -7,15 +7,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59a31806-e124-4a55-8148-98d6dbe9810a" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MyUpcomingEvents_20160108_154954.xls" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/MyUpcomingEvents_20160110_205950.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/groupCSV-12-28-2015---01-11-2016.csv" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/BackEndServer/com/oyg/worker/TicketGrossesProcessor.class" afterPath="$PROJECT_DIR$/out/production/BackEndServer/com/oyg/worker/TicketGrossesProcessor.class" />
+    <list default="true" id="59a31806-e124-4a55-8148-98d6dbe9810a" name="Default" comment="Took out the helper function for reading excel files; added TicketMasterTraffic.java for storing ticketmaster event details page (edp) traffic data; added new function to read in that edp traffic data file.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/oyg/TicketMasterTraffic.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/oyg/TicketMaster.java" afterPath="$PROJECT_DIR$/src/com/oyg/TicketMasterEvents.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oyg/TicketMaster.java" afterPath="$PROJECT_DIR$/src/com/oyg/TicketMaster.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oyg/rest/GetTicketMasterData.java" afterPath="$PROJECT_DIR$/src/com/oyg/rest/GetTicketMasterData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/oyg/worker/TicketGrossesProcessor.java" afterPath="$PROJECT_DIR$/src/com/oyg/worker/TicketGrossesProcessor.java" />
     </list>
     <ignored path="BackEndServer.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,8 +37,8 @@
       <file leaf-file-name="GetTicketMasterData.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/oyg/rest/GetTicketMasterData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.8027211">
-              <caret line="53" column="6" selection-start-line="53" selection-start-column="6" selection-end-line="53" selection-end-column="6" />
+            <state vertical-scroll-proportion="1.3236715">
+              <caret line="179" column="5" selection-start-line="179" selection-start-column="5" selection-end-line="179" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -50,23 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TicketMaster.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/oyg/TicketMaster.java">
+      <file leaf-file-name="TicketMasterEvents.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/oyg/TicketMasterEvents.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="88" column="8" selection-start-line="88" selection-start-column="8" selection-end-line="88" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TicketGrossesProcessor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/oyg/worker/TicketGrossesProcessor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+              <caret line="61" column="41" selection-start-line="61" selection-start-column="41" selection-end-line="61" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,6 +91,8 @@
         <option value="$PROJECT_DIR$/src/com/oyg/rest/GetSproutData.java" />
         <option value="$PROJECT_DIR$/src/com/oyg/worker/TicketGrossesProcessor.java" />
         <option value="$PROJECT_DIR$/src/com/oyg/TicketMaster.java" />
+        <option value="$PROJECT_DIR$/src/TicketMasterTraffic.java" />
+        <option value="$PROJECT_DIR$/src/com/oyg/TicketMasterEvents.java" />
         <option value="$PROJECT_DIR$/src/com/oyg/rest/GetTicketMasterData.java" />
       </list>
     </option>
@@ -153,6 +139,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -190,75 +177,8 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BackEndServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BackEndServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="oyg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="worker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BackEndServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BackEndServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="oyg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="server" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BackEndServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BackEndServer" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="oyg" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="rest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -829,7 +749,9 @@
       <workItem from="1452986199868" duration="4096000" />
       <workItem from="1452992357718" duration="3608000" />
       <workItem from="1453181957653" duration="16000" />
-      <workItem from="1453260948723" duration="9417000" />
+      <workItem from="1453260948723" duration="11222000" />
+      <workItem from="1453310708657" duration="9330000" />
+      <workItem from="1453359383485" duration="14193000" />
     </task>
     <task id="LOCAL-00001" summary="Added &quot;printWeeklyGrosses()&quot; function to attempt to access data from our &quot;weeklyGrosses&quot; collection in our mongodb.">
       <created>1448502746512</created>
@@ -885,11 +807,17 @@
       <option name="project" value="LOCAL" />
       <updated>1452985372658</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Update use of ss.usermodel; changed code not to skip a number of header lines but to count data collected in a line to know if it needs to process it; also updated file parse to be basicsummary file instead of myupcomingevents (and then updated ticketmaster data to reflect new fields); broke up the current reading function to make sheet reading function a separate helper function in anticipation of having to read more excel sheets and wanting to avoid duplicate code.">
+      <created>1453272535654</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1453272535654</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85684000" />
+    <option name="totallyTimeSpent" value="111012000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -906,16 +834,16 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30146083" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3001328" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37715805" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22576362" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934928" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14140625" sideWeight="0.4943182" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15078124" sideWeight="0.4943182" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.284375" sideWeight="0.5056818" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -953,11 +881,14 @@
     <MESSAGE value="Updated SproutDailySummary data types to use Date and ints instead of just Strings; also made changes to GetSproutData.java to convert tokens to the appropriate types." />
     <MESSAGE value="Added TicketMaster.java for TicketMaster data; also added GetTicketMasterData.java for processing TicketMaster .xls files." />
     <MESSAGE value="Using ss.usermodel instead of hssf.usermodel to read both xls and xlsx files, not just xls files." />
-    <option name="LAST_COMMIT_MESSAGE" value="Using ss.usermodel instead of hssf.usermodel to read both xls and xlsx files, not just xls files." />
+    <MESSAGE value="Update use of ss.usermodel; changed code not to skip a number of header lines but to count data collected in a line to know if it needs to process it; also updated file parse to be basicsummary file instead of myupcomingevents (and then updated ticketmaster data to reflect new fields); broke up the current reading function to make sheet reading function a separate helper function in anticipation of having to read more excel sheets and wanting to avoid duplicate code." />
+    <MESSAGE value="Took out the helper function for reading excel files; added TicketMasterTraffic.java for storing tm edp traffic data; added new function to read in that edp traffic data file." />
+    <MESSAGE value="Took out the helper function for reading excel files; added TicketMasterTraffic.java for storing ticketmaster event details page (edp) traffic data; added new function to read in that edp traffic data file." />
+    <option name="LAST_COMMIT_MESSAGE" value="Took out the helper function for reading excel files; added TicketMasterTraffic.java for storing ticketmaster event details page (edp) traffic data; added new function to read in that edp traffic data file." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -966,13 +897,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/oyg/rest/GetTicketGrosses.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oyg/TicketGross.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1300,8 +1224,12 @@
     </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_65.jdk/Contents/Home/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33261338">
+        <state vertical-scroll-proportion="-10.156463">
           <caret line="234" column="18" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
+          <folding>
+            <element signature="e#10065#10066#0" expanded="false" />
+            <element signature="e#10148#10149#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1310,15 +1238,25 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
           <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/oyg/TicketMasterTraffic.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.006289308">
+          <caret line="40" column="51" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
+          <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/oyg/TicketMaster.java">
+    <entry file="file://$PROJECT_DIR$/src/com/oyg/TicketMasterEvents.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="88" column="8" selection-start-line="88" selection-start-column="8" selection-end-line="88" selection-end-column="8" />
+          <caret line="61" column="41" selection-start-line="61" selection-start-column="41" selection-end-line="61" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1327,8 +1265,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/oyg/rest/GetTicketMasterData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8027211">
-          <caret line="53" column="6" selection-start-line="53" selection-start-column="6" selection-end-line="53" selection-end-column="6" />
+        <state vertical-scroll-proportion="1.3236715">
+          <caret line="179" column="5" selection-start-line="179" selection-start-column="5" selection-end-line="179" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

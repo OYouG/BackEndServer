@@ -10,7 +10,7 @@ import java.util.TimeZone;
 /**
  * Created by msllavore on 1/15/16.
  */
-public class TicketMaster {
+public class TicketMasterEvents {
     static DateFormat df = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss zzz");
 
     private String evCode;
@@ -25,7 +25,7 @@ public class TicketMaster {
     private int opens;
     private int holds; //private int preprints; // all values of zero
 
-    public TicketMaster(String evCode, Time epTime, Date eventDate, int todaySold, BigDecimal todayGross,
+    public TicketMasterEvents(String evCode, Time epTime, Date eventDate, int todaySold, BigDecimal todayGross,
                         int toDateSold, int toDateZeroFace, int toDateTotal, BigDecimal toDateGross,
                         int opens, int holds){
         this.evCode = evCode;
@@ -55,35 +55,35 @@ public class TicketMaster {
 
     public int getTodaySold() { return todaySold; }
 
-    public void setTodaySold() { this.todaySold = todaySold; }
+    public void setTodaySold(int todaySold) { this.todaySold = todaySold; }
 
     public BigDecimal getTodayGross() { return todayGross; }
 
-    public void setTodayGross() { this.todayGross = todayGross; }
+    public void setTodayGross(BigDecimal todayGross) { this.todayGross = todayGross; }
 
     public int getToDateSold() { return toDateSold; }
 
-    public void setToDateSold() { this.toDateSold = toDateSold; }
+    public void setToDateSold(int toDateSold) { this.toDateSold = toDateSold; }
 
     public int getToDateZeroFace() { return toDateZeroFace; }
 
-    public void setToDateZeroFace() { this.toDateZeroFace = toDateZeroFace; }
+    public void setToDateZeroFace(int toDateZeroFace) { this.toDateZeroFace = toDateZeroFace; }
 
     public int getToDateTotal() { return toDateTotal; }
 
-    public void setToDateTotal() { this.toDateTotal = toDateTotal; }
+    public void setToDateTotal(int toDateTotal) { this.toDateTotal = toDateTotal; }
 
     public BigDecimal getToDateGross() { return toDateGross; }
 
-    public void setToDateGross() { this.toDateGross = toDateGross; }
+    public void setToDateGross(BigDecimal toDateGross) { this.toDateGross = toDateGross; }
 
     public int getOpens() { return opens; }
 
-    public void setOpens() { this.opens = opens; }
+    public void setOpens(int opens) { this.opens = opens; }
 
     public int getHolds() { return holds; }
 
-    public void setHolds() { this.holds = holds; }
+    public void setHolds(int holds) { this.holds = holds; }
 
     public String toString(){
         df.setTimeZone(TimeZone.getTimeZone("America/New_York"));
