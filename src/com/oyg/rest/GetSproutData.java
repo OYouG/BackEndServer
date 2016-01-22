@@ -15,11 +15,12 @@ import java.util.List;
  * Created by msllavore on 1/15/16.
  */
 public class GetSproutData {
-    public static void main(String[] args)
-    {
+    //public List<SproutDailySummary> readSproutData() {
+    public static void main(String[] args) {
         //Input file which needs to be parsed
-        String fileToParse = "groupCSV-12-28-2015---01-11-2016.csv";
+        String fileToParse = "/Users/msllavore/Desktop/Inf191/sprout/groupCSV-01-05-2016---01-19-2016.csv";
         BufferedReader fileReader = null;
+        List<SproutDailySummary> sproutData = new ArrayList<SproutDailySummary>();
 
         //Delimiter used in CSV file
         final String DELIMITER = ",";
@@ -30,7 +31,7 @@ public class GetSproutData {
             fileReader = new BufferedReader(new FileReader(fileToParse));
 
             //Read the file line by line
-            List<SproutDailySummary> sproutData = new ArrayList<SproutDailySummary>();
+
             fileReader.readLine();
             while ((line = fileReader.readLine()) != null)
             {
@@ -66,5 +67,6 @@ public class GetSproutData {
                 e.printStackTrace();
             }
         }
+        //return sproutData;
     }
 }
