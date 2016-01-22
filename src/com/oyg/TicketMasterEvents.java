@@ -16,6 +16,7 @@ public class TicketMasterEvents {
     private String evCode;
     private Time epTime;
     private Date eventDate;
+    private Date dateToday;
     private int todaySold;
     private BigDecimal todayGross;
     private int toDateSold; //private double toDatePercentSold; // calculable: toDateSold/1695
@@ -25,12 +26,13 @@ public class TicketMasterEvents {
     private int opens;
     private int holds; //private int preprints; // all values of zero
 
-    public TicketMasterEvents(String evCode, Time epTime, Date eventDate, int todaySold, BigDecimal todayGross,
+    public TicketMasterEvents(String evCode, Time epTime, Date eventDate, Date dateToday, int todaySold, BigDecimal todayGross,
                         int toDateSold, int toDateZeroFace, int toDateTotal, BigDecimal toDateGross,
                         int opens, int holds){
         this.evCode = evCode;
         this.epTime = epTime;
         this.eventDate = eventDate;
+        this.dateToday = dateToday;
         this.todaySold = todaySold;
         this.todayGross = todayGross;
         this.toDateSold = toDateSold;
@@ -52,6 +54,10 @@ public class TicketMasterEvents {
     public Date getEventDate() { return eventDate; }
 
     public void setEventDate(Date eventDate) { this.eventDate = eventDate; }
+
+    public Date getDateToday() { return dateToday; }
+
+    public void setDateToday(Date dateToday) { this.dateToday = dateToday; }
 
     public int getTodaySold() { return todaySold; }
 
@@ -88,7 +94,7 @@ public class TicketMasterEvents {
     public String toString(){
         df.setTimeZone(TimeZone.getTimeZone("America/New_York"));
         return "Evcode: " + this.evCode + "\nEptime: " + this.epTime +
-                "\nEventDate: " + df.format(this.eventDate) + "\nTodaySold: " + this.todaySold +
+                "\nEventDate: " + df.format(this.eventDate) + "\nDateToday: " + df.format(this.dateToday) + "\nTodaySold: " + this.todaySold +
                 "\nTodayGross: " + this.todayGross + "\nToDateSold: " + this.toDateSold +
                 "\nToDateZeroFace: " + this.toDateZeroFace + "\nToDateTotal: " + this.toDateTotal +
                 "\ntoDateGross: " + this.toDateGross +
