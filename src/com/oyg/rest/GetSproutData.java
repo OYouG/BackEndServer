@@ -6,6 +6,7 @@ import java.io.IOException;
 
 import com.oyg.SproutDailySummary;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -15,33 +16,28 @@ import java.util.List;
  * Created by msllavore on 1/15/16.
  */
 public class GetSproutData {
-    //public List<SproutDailySummary> readSproutData() {
-    public static void main(String[] args) {
-        //Input file which needs to be parsed
-        String fileToParse = "/Users/msllavore/Desktop/Inf191/sprout/groupCSV-01-05-2016---01-19-2016.csv";
-        BufferedReader fileReader = null;
-        List<SproutDailySummary> sproutData = new ArrayList<SproutDailySummary>();
+    public List<SproutDailySummary> readSproutData(String filePath) {
+        BufferedReader fileReader;
+        List<SproutDailySummary> sproutData = new ArrayList<>();
 
-        //Delimiter used in CSV file
-        final String DELIMITER = ",";
+        final String DELIMITER = ","; //Delimiter used in CSV file
+
         try
         {
-            String line = "";
+            String line;
+
             //Create the file reader
-            fileReader = new BufferedReader(new FileReader(fileToParse));
+            fileReader = new BufferedReader(new FileReader(filePath));
 
             //Read the file line by line
-
             fileReader.readLine();
             while ((line = fileReader.readLine()) != null)
             {
                 //Get all tokens available in line
                 String[] tokens = line.split(DELIMITER);
 
-                SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+                SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy");
                 Date date = formatter.parse(tokens[0]);
-                //System.out.println(date);
-                //System.out.println(formatter.format(date));
 
                 SproutDailySummary day = new SproutDailySummary(date, Integer.valueOf(tokens[1]),
                         Integer.valueOf(tokens[2]), Integer.valueOf(tokens[3]), Integer.valueOf(tokens[5]),
@@ -50,23 +46,10 @@ public class GetSproutData {
                         Integer.valueOf(tokens[15]), Integer.valueOf(tokens[16]), Integer.valueOf(tokens[18]));
                 sproutData.add(day);
             }
-            for (SproutDailySummary thing: sproutData)
-            {
-                System.out.println(thing);
-            }
-
+            sproutData.forEach(System.out::println);
+            fileReader.close();
         }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-        finally
-        {
-            try {
-                fileReader.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        //return sproutData;
+        catch (IOException | ParseException e) { e.printStackTrace(); }
+        return sproutData;
     }
 }

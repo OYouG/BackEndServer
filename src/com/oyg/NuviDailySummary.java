@@ -6,20 +6,16 @@ import java.util.Date;
  * Created by Madeleine K. Surjani on 1/20/2016
  */
 public class NuviDailySummary {
-    private String sourceID;
-    private String sourceName;
     private String keyword;
-    private String type;
+    private String trendType;
     private Date fromHoursMs;
     private Date toHoursMs;
     private int total;
 
-    public NuviDailySummary(String sourceID, String sourceName, String keyword, String type, Date fromHoursMs, Date toHoursMs, int total)
+    public NuviDailySummary(String keyword, String trendType, Date fromHoursMs, Date toHoursMs, int total)
     {
-        this.sourceID = sourceID;
-        this.sourceName = sourceName;
         this.keyword = keyword;
-        this.type = type;
+        this.trendType = trendType;
         this.fromHoursMs = fromHoursMs;
         this.toHoursMs = toHoursMs;
         this.total = total;
@@ -27,30 +23,9 @@ public class NuviDailySummary {
 
     public String toString()
     {
-        return "Source ID: " + this.sourceID + "\nSource Name: " + this.sourceName +
-                "\nKeyword: " + this.keyword + "\nType: " + this.type +
+        return  "Keyword: " + this.keyword + "\nTrendType: " + this.trendType +
                 "\nFrom Hours MS: " + this.fromHoursMs + "\nTo Hours MS: " + this.toHoursMs +
                 "\nTotal: " + this.total + "\n\n";
-    }
-
-    public String getSourceID()
-    {
-        return sourceID;
-    }
-
-    public void setSourceID(String sourceID)
-    {
-        this.sourceID = sourceID;
-    }
-
-    public String getSourceName()
-    {
-        return sourceName;
-    }
-
-    public void setSourceName(String sourceName)
-    {
-        this.sourceName = sourceName;
     }
 
     public String getKeyword()
@@ -63,14 +38,14 @@ public class NuviDailySummary {
         this.keyword = keyword;
     }
 
-    public String getType()
+    public String getTrendType()
     {
-        return type;
+        return trendType;
     }
 
-    public void setType(String type)
+    public void setType(String trendType)
     {
-        this.type = type;
+        this.trendType = trendType;
     }
 
     public Date getFromHoursMs()

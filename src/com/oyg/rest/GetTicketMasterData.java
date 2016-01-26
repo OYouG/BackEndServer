@@ -3,10 +3,10 @@ package com.oyg.rest;
 import com.oyg.TicketMasterEvents;
 import com.oyg.TicketMasterPriceLevels;
 import com.oyg.TicketMasterTraffic;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.ss.usermodel.*;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+// import org.apache.poi.hssf.usermodel.HSSFWorkbook; // import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
 
 import java.io.*;
 import java.math.BigDecimal;
@@ -20,13 +20,11 @@ import java.util.*;
  * Created by msllavore on 1/15/16.
  */
 public class GetTicketMasterData {
-    public List<TicketMasterEvents> readTicketMasterEventsSummary() {
-    //public static void main(String[] args){
+    public List<TicketMasterEvents> readTicketMasterEventsSummary(String filePath) {
         ArrayList<TicketMasterEvents> ListOfTicketMasterEvents = new ArrayList<>();
         try
         {
-            //FileInputStream file = new FileInputStream(new File("/Users/msllavore/Desktop/Inf191/ticketMaster/BasicSummary_Jan18.xlsx"));
-            FileInputStream file = new FileInputStream(new File("/Users/msllavore/Desktop/Inf191/ticketMaster/BasicSummary_Jan20.xls"));
+            FileInputStream file = new FileInputStream(new File(filePath));
             Workbook workbook = WorkbookFactory.create(file);
             Sheet sheet = workbook.getSheetAt(0);
 
@@ -35,7 +33,7 @@ public class GetTicketMasterData {
 
             Iterator<Row> rowIterator = sheet.iterator();
 
-            String dateTodayString = null;
+            String dateTodayString;
             Date dateTodayDate = null;
             while (rowIterator.hasNext()) {
                 Row row = rowIterator.next();
@@ -115,21 +113,17 @@ public class GetTicketMasterData {
 
             file.close();
             System.out.println("Size of final list: " + ListOfTicketMasterEvents.size());
-            for (TicketMasterEvents thing : ListOfTicketMasterEvents) { System.out.println(thing); }
+            ListOfTicketMasterEvents.forEach(System.out::println);
         }
-        catch (FileNotFoundException e) { e.printStackTrace(); }
-        catch (IOException e) { e.printStackTrace(); }
-        catch (InvalidFormatException e) { e.printStackTrace(); }
-        catch (ParseException e) { e.printStackTrace(); }
+        catch (ParseException | InvalidFormatException | IOException e) { e.printStackTrace(); }
         return ListOfTicketMasterEvents;
     }
 
-    public List<TicketMasterTraffic> readTicketMasterWebTraffic() {
-    //public static void main(String[] args){
+    public List<TicketMasterTraffic> readTicketMasterWebTraffic(String filePath) {
         ArrayList<TicketMasterTraffic> ListOfTicketMasterTraffic = new ArrayList<>();
         try
         {
-            FileInputStream file = new FileInputStream(new File("/Users/msllavore/Desktop/Inf191/ticketMaster/tmOne/edp/traffic-trends2.xlsx"));
+            FileInputStream file = new FileInputStream(new File(filePath));
             Workbook workbook = WorkbookFactory.create(file);
 
             Sheet sheet1 = workbook.getSheetAt(0);
@@ -208,20 +202,16 @@ public class GetTicketMasterData {
             }
 
             System.out.println("Size of final list: " + ListOfTicketMasterTraffic.size());
-            for (TicketMasterTraffic thing : ListOfTicketMasterTraffic) { System.out.println(thing); }
+            ListOfTicketMasterTraffic.forEach(System.out::println);
         }
-        catch (FileNotFoundException e) { e.printStackTrace(); }
-        catch (IOException e) { e.printStackTrace(); }
-        catch (InvalidFormatException e) { e.printStackTrace(); }
-        catch (ParseException e) { e.printStackTrace(); }
+        catch (ParseException | InvalidFormatException | IOException e) { e.printStackTrace(); }
         return ListOfTicketMasterTraffic;
     }
 
-    //public List<TicketMasterPriceLevels> readTicketMasterPriceLevels() {
-        public static void main(String[] args){
+    public List<TicketMasterPriceLevels> readTicketMasterPriceLevels(String filePath) {
         ArrayList<TicketMasterPriceLevels> ListOfTicketMasterPriceLevels = new ArrayList<>();
         try {
-            FileInputStream file = new FileInputStream(new File("/Users/msllavore/Desktop/Inf191/ticketMaster/tmOne/plevels/event-audit2.xlsx"));
+            FileInputStream file = new FileInputStream(new File(filePath));
             Workbook workbook = WorkbookFactory.create(file);
 
             Sheet sheet1 = workbook.getSheetAt(0);
@@ -232,7 +222,7 @@ public class GetTicketMasterData {
             // read 1st sheet for evcode and to find dateToday
             Iterator<Row> rowIterator1 = sheet1.iterator();
             String evCode = null;
-            String dateTodayString = null;
+            String dateTodayString;
             Date dateTodayDate = null;
 
             // adds all rows to priceData with each row organized in a single arraylist
@@ -296,13 +286,10 @@ public class GetTicketMasterData {
                 ListOfTicketMasterPriceLevels.add(tmplevels);
             }
             System.out.println("Size of final list: " + ListOfTicketMasterPriceLevels.size());
-            for (TicketMasterPriceLevels thing : ListOfTicketMasterPriceLevels) { System.out.println(thing); }
+            ListOfTicketMasterPriceLevels.forEach(System.out::println);
         }
-            catch (FileNotFoundException e) { e.printStackTrace(); }
-            catch (IOException e) { e.printStackTrace(); }
-            catch (InvalidFormatException e) { e.printStackTrace(); }
-            catch (ParseException e) { e.printStackTrace(); }
-            //return ListOfTicketMasterPriceLevels;
+            catch (ParseException | InvalidFormatException | IOException e) { e.printStackTrace(); }
+            return ListOfTicketMasterPriceLevels;
         }
 }
 

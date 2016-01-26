@@ -2,7 +2,7 @@ package com.oyg;
 
 import com.mongodb.*;
 import com.oyg.data.ClientTicketGross;
-import com.oyg.rest.GetTicketGrosses;
+//import com.oyg.rest.GetTicketGrosses;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
@@ -13,8 +13,7 @@ import java.util.ArrayList;
  */
 public class TestMongoConnection
 {
-
-    private final DB db;
+    /*private final DB db;
     private final MongoClient mongoClient;
 
     public TestMongoConnection() {
@@ -46,8 +45,8 @@ public class TestMongoConnection
 //      TestMongoConnection testMongoConnection = new TestMongoConnection();
 //        testMongoConnection.insertGrossesData(null);
 //    }
-
-    public void insertGrossesData(List<TicketGross> grossesFromServer) {
+*/
+    /*public void insertGrossesData(List<TicketGross> grossesFromServer) {
         //$TODO$ replicate insertARecord. insert the grosses from server instead.
         DBCollection coll = db.getCollection("weeklyGrosses");
         //grossesFromServer = new GetTicketGrosses().getGrossesFromServer("date");
@@ -60,8 +59,8 @@ public class TestMongoConnection
             coll.insert(doc);
         }
         //mongoClient.close();
-    }
-
+    }*/
+/*
     public void printWeeklyGrosses() {
         // creating objects from mongodb objects; to be passed onto front end
         List<DBObject> mongoObjects = new ArrayList<>(); // storing objects queried from mongodb
@@ -98,5 +97,5 @@ public class TestMongoConnection
 
 
         mongoClient.close();
-    }
+    }*/
 }

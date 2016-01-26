@@ -62,8 +62,7 @@ public class IBDBWeeklyGrosses {
         return attendance;
     }
 
-    public void setAttendance(String attendance)
-    {
+    public void setAttendance(String attendance) {
         this.attendance = attendance;
     }
 

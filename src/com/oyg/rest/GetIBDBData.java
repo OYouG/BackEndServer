@@ -5,6 +5,7 @@ import com.oyg.IBDBWeeklyGrosses;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.text.ParseException;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -16,12 +17,9 @@ import java.util.List;
 
 public class GetIBDBData{
 
-    public List<IBDBWeeklyGrosses> returningIBDBData()
+    public List<IBDBWeeklyGrosses> returningIBDBData(String filePath)
     {
-        //Input file which needs to be parsed
-        String fileToParse = "/Users/msllavore/Desktop/Inf191/ibdb/ibdb_AAIP.csv";
-
-        BufferedReader fileReader = null;
+        BufferedReader fileReader;
 
         //Delimiter used in CSV files
         final String DELIMETER = "\",";
@@ -31,10 +29,10 @@ public class GetIBDBData{
 
         try
         {
-            String line = "";
+            String line;
 
             //Create the file reader
-            fileReader = new BufferedReader(new FileReader(fileToParse));
+            fileReader = new BufferedReader(new FileReader(filePath));
 
             //Read the file line by line
             fileReader.readLine();
@@ -62,35 +60,11 @@ public class GetIBDBData{
                         date, grossToken, grossPotentialToken, attendanceToken, capacityToken);
                 ibdbData.add(day);
             }
-			/*for(IBDBWeeklyGrosses oneDaySummary: ibdbData)
-			{
-				System.out.println(oneDaySummary);
-			}*/
+            fileReader.close();
+            ibdbData.forEach(System.out::println);
         }
-
-        catch(Exception e)
-        {
-            e.printStackTrace();
-        }
-        finally
-        {
-            try
-            {
-                fileReader.close();
-            }
-            catch(IOException e)
-            {
-                e.printStackTrace();
-            }
-        }
+        catch(IOException | ParseException e) { e.printStackTrace(); }
         return ibdbData;
-    }
-
-    public static void main(String[] args) {
-        // TODO Auto-generated method stub
-
-        GetIBDBData get = new GetIBDBData();
-        System.out.println(get.returningIBDBData());
     }
 }
 
