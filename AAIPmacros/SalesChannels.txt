@@ -1,0 +1,50 @@
+Sub SalesChannels()
+'
+' SalesChannels Macro
+'
+
+'
+    Sheets("By Sales Channel").Select
+    Range("F1").Select
+    ExecuteExcel4Macro "PATTERNS(1,0,13395507,,2,3,0,0)"
+    ExecuteExcel4Macro "ALIGNMENT(3,FALSE,2,FALSE,FALSE,,FALSE,FALSE,0,1)"
+    Dim startDate As Date
+    Dim endDate As Date
+
+    Select Case Weekday(Now())
+        Case vbSunday
+            startDate = Format((Now() - 1) - Weekday(Now() - 1) + 1, "MM/DD/YY")
+            endDate = Format((Now() - 1) - Weekday(Now() - 1) + 7, "MM/DD/YY")
+        Case Else
+            startDate = Format(Date - Weekday(Date) + 1, "MM/DD/YY")
+            endDate = Format(Date - Weekday(Date) + 7, "MM/DD/YY")
+    End Select
+    ActiveCell.FormulaR1C1 = "Start Date"
+    Range("F2").Select
+    ActiveCell.FormulaR1C1 = startDate
+    Range("F2").Select
+    Selection.Copy
+    Range("F3:F8").Select
+    ActiveSheet.Paste
+    Range("G1").Select
+    Application.CutCopyMode = False
+    ExecuteExcel4Macro "PATTERNS(1,0,13395507,,2,3,0,0)"
+    ExecuteExcel4Macro "ALIGNMENT(3,FALSE,2,FALSE,FALSE,,FALSE,FALSE,0,1)"
+    ActiveCell.FormulaR1C1 = "End Date"
+    Range("G2").Select
+    ActiveCell.FormulaR1C1 = endDate
+    Range("G2").Select
+    Selection.Copy
+    Range("G3:G8").Select
+    ActiveSheet.Paste
+    Range("F9").Select
+    Application.CutCopyMode = False
+    Selection.EntireRow.Delete
+    Columns("E:E").Select
+    Selection.NumberFormat = "#,##0.00"
+    Selection.NumberFormat = "0.00"
+    ActiveCell.FormulaR1C1 = "Face Value"
+    Columns("B:D").Select
+    Selection.NumberFormat = "0"
+    Range("F13").Select
+End Sub

@@ -1,0 +1,62 @@
+Sub SalesLocations()
+'
+' SalesLocations Macro
+'
+
+'
+    Sheets("By Postal Code - Summary").Select
+    Range("Z1").Select
+    ActiveCell.FormulaR1C1 = "start Date"
+    Range("AA1").Select
+    ActiveCell.FormulaR1C1 = "end Date"
+    Range("A:A,B:B,D:D,E:E").Select
+    Range("E1").Activate
+    Selection.Delete Shift:=xlToLeft
+    Range("C:C,E:E").Select
+    Range("E1").Activate
+    Selection.Delete Shift:=xlToLeft
+    Columns("D:S").Select
+    Selection.Delete Shift:=xlToLeft
+    Range("D2").Select
+
+    Dim lRow As Long
+    lRow = Cells(Rows.Count, 1).End(xlUp).row
+
+    Dim startDate As Date
+    Dim endDate As Date
+
+    Select Case Weekday(Now())
+        Case vbSunday
+            startDate = Format((Now() - 1) - Weekday(Now() - 1) + 1, "MM/DD/YY")
+            endDate = Format((Now() - 1) - Weekday(Now() - 1) + 7, "MM/DD/YY")
+        Case Else
+            startDate = Format(Date - Weekday(Date) + 1, "MM/DD/YY")
+            endDate = Format(Date - Weekday(Date) + 7, "MM/DD/YY")
+    End Select
+
+    Dim i As Integer
+    For i = 2 To lRow
+        Range("D" & i).Value = startDate
+        Range("E" & i).Value = endDate
+    Next i
+
+    Columns("D:E").Select
+    Selection.NumberFormat = "m/d/yy;@"
+    Range("E" & lRow).Select
+    Selection.Offset(1, 0).Select
+    Selection.EntireRow.Delete
+    Columns("B:B").Select
+    Selection.NumberFormat = "0"
+    Columns("C:C").Select
+    Selection.NumberFormat = "#,##0.00"
+    Selection.NumberFormat = "0.00"
+    Range("F2").Select
+    Dim j As Integer
+    For j = 2 To lRow
+        If Range("A" & j).Value = "null, null" Then
+        Range("A" & j).Value = "Unknown"
+        End If
+    Next j
+
+
+End Sub

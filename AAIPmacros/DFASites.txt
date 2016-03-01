@@ -1,0 +1,42 @@
+Sub DFASites()
+'
+' DFASites Macro
+' Recording on DFASites where it deletes columns and formats (,) and $
+'
+'
+    Columns("G:H").Select
+    Selection.Delete Shift:=xlToLeft
+    Columns("A:A").Select
+    Selection.Insert Shift:=xlToRight, CopyOrigin:=xlFormatFromLeftOrAbove
+    Range("A1").Select
+    ActiveCell.FormulaR1C1 = "Date Today"
+    Range("A2").Select
+    ActiveCell.FormulaR1C1 = "=NOW()-1"
+    Range("A2").Select
+    Selection.Copy
+    Application.CutCopyMode = False
+    Selection.AutoFill Destination:=Range("A2:A16"), Type:=xlFillDefault
+    Range("A2:A16").Select
+    Columns("A:A").Select
+    Selection.NumberFormat = "m/d/yy"
+    Columns("G:H").Select
+    Selection.NumberFormat = "0.00"
+    Columns("E:E").Select
+    Selection.Copy
+    Columns("I:I").Select
+    Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+        False, Transpose:=False
+    Columns("E:E").Select
+    Application.CutCopyMode = False
+    Selection.ClearContents
+    Columns("I:I").Select
+    Selection.Cut
+    Columns("E:E").Select
+    ActiveSheet.Paste
+    Dim lRow As Long
+    lRow = Cells(Rows.Count, 1).End(xlUp).Row
+    Dim i As Integer
+    For i = 2 To lRow
+        Range("E" & i).Value = Range("E" & i).Value * 100
+    Next i
+End Sub

@@ -1,0 +1,16 @@
+Sub Nuvi()
+'
+' Nuvi Macro
+'
+
+'
+    Range("A:A,B:B").Select
+    Range("B1").Activate
+    Selection.Delete Shift:=xlToLeft
+    Range("C:C,D:D").Select
+    Range("D1").Activate
+    Selection.NumberFormat = "m/d/yy;@"
+    Columns("E:E").Select
+    Selection.NumberFormat = "0"
+    Range("F1").Select
+End Sub

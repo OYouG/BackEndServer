@@ -1,0 +1,45 @@
+Sub TicketSales()
+'
+' TicketSales Macro
+'
+
+'
+    Range("A1:A11").Select
+    Selection.EntireRow.Delete
+    Range("A:A,B:B,D:D,E:E,F:F,I:I,J:J,N:N,Q:Q,S:S").Select
+    Range("S1").Activate
+    Selection.Delete Shift:=xlToLeft
+    Range("M1").Select
+    ActiveCell.FormulaR1C1 = "Date Today"
+    Range("M2").Select
+    ActiveCell.FormulaR1C1 = Format(Now() - 1, "MM/DD/YY")
+    Range("M2").Select
+    Selection.Copy
+    Range("M3:M706").Select
+    ActiveSheet.Paste
+    Range("N4").Select
+    Application.CutCopyMode = False
+    ActiveCell.FormulaR1C1 = ""
+    Range("E:E,I:I").Select
+    Range("I1").Activate
+    Selection.NumberFormat = "#,##0.00"
+    Selection.NumberFormat = "0.00"
+    Range("D:D,F:F,G:G,H:H,J:J,K:K,L:L").Select
+    Range("L1").Activate
+    Selection.NumberFormat = "0"
+    Range("C:C,M:M").Select
+    Range("M1").Activate
+    Selection.NumberFormat = "m/d/yy;@"
+    Range("N1").Select
+    Range("D707").Select
+    Selection.EntireRow.Delete
+
+    Dim i As Integer
+    For i = 1 To 706
+        If IsEmpty(Range("D" & i)) Then
+        Range("D" & i).Value = 0
+        End If
+    Next i
+
+
+End Sub

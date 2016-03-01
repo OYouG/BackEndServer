@@ -1,0 +1,16 @@
+Sub SproutTwitterFormatter()
+'
+' SproutTwitterFormatter Macro
+'
+
+'
+    Range("B:B,C:C,D:D,H:H,I:I,J:J,K:K,L:L,M:M,O:O").Select
+    Range("O1").Activate
+    Selection.Delete Shift:=xlToLeft
+    Rows("1:1").Select
+    Selection.Delete Shift:=xlUp
+    Range("G1").Select
+    ActiveCell.FormulaR1C1 = "Twitter"
+    Selection.AutoFill Destination:=Range("G1:G" & Range("A" & Rows.Count).End(xlUp).Row)
+    Range("G1:G5").Select
+End Sub

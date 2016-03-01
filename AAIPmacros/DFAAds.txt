@@ -1,0 +1,54 @@
+Sub DFAAds()
+'
+' DFAAds Macro
+' Recording the ads by taking out columns and formatting the (,) and $
+'
+'
+' Macro1 Macro
+'
+'
+    Sheets("DFA - Ads").Select
+    Columns("A:A").Select
+    Selection.Insert Shift:=xlToRight, CopyOrigin:=xlFormatFromLeftOrAbove
+    Range("A1").Select
+    ActiveCell.FormulaR1C1 = "Date Today"
+    Range("A2").Select
+    ActiveCell.FormulaR1C1 = Format(Now() - 1, "MM/DD/YY")
+    Range("A2").Select
+    Selection.Copy
+    Range("A3:A29").Select
+    ActiveSheet.Paste
+    Range("B30").Select
+    Application.CutCopyMode = False
+    Selection.EntireRow.Delete
+    Columns("J:M").Select
+    Selection.Delete Shift:=xlToLeft
+    Columns("I:J").Select
+    Range("J1").Activate
+    Selection.NumberFormat = "#,##0.00"
+    Selection.NumberFormat = "0.00"
+    Range("H:H,F:F,E:E").Select
+    Range("E1").Activate
+    Selection.NumberFormat = "0"
+    Columns("G:G").Select
+    Selection.Copy
+    Columns("K:K").Select
+    Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+        False, Transpose:=False
+    Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+        False, Transpose:=False
+    Columns("G:G").Select
+    Application.CutCopyMode = False
+    Selection.ClearContents
+    Columns("K:K").Select
+    Selection.Cut
+    Columns("G:G").Select
+    ActiveSheet.Paste
+    Range("K2").Select
+    Dim lRow As Long
+    lRow = Cells(Rows.Count, 1).End(xlUp).Row
+    Dim i As Integer
+    For i = 2 To lRow
+        Range("G" & i).Value = Range("G" & i).Value * 100
+    Next i
+End Sub

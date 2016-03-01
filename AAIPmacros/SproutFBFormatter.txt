@@ -1,0 +1,17 @@
+Sub SproutFBFormatter()
+'
+' SproutFBFormatter Macro
+'
+
+'
+    Columns("C:Y").Select
+    Range("Y1").Activate
+    Selection.Delete Shift:=xlToLeft
+    Rows("1:1").Select
+    Selection.Delete Shift:=xlUp
+    Range("C1").Select
+    ActiveCell.FormulaR1C1 = "Facebook"
+    Range("C1").Select
+    Selection.AutoFill Destination:=Range("C1:C" & Range("A" & Rows.Count).End(xlUp).Row)
+    Range("C1:C30").Select
+End Sub

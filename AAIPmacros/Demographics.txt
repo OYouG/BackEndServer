@@ -1,0 +1,209 @@
+Sub Demographics()
+'
+' Demographics Macro
+'
+
+'
+    Sheets("Demographics").Select
+    Sheets.Add
+    Sheets("Sheet1").Select
+    Sheets("Sheet1").Name = "TMDemographics"
+    Range("A1").Select
+    ActiveCell.FormulaR1C1 = "startDate"
+    Range("B1").Select
+    ActiveCell.FormulaR1C1 = "endDate"
+    Range("C1").Select
+    ActiveCell.FormulaR1C1 = "male"
+    Range("D1").Select
+    ActiveCell.FormulaR1C1 = "female"
+    Range("E1").Select
+    ActiveCell.FormulaR1C1 = "hs"
+    Range("F1").Select
+    ActiveCell.FormulaR1C1 = "college"
+    Range("G1").Select
+    ActiveCell.FormulaR1C1 = "grad"
+    Range("H1").Select
+    ActiveCell.FormulaR1C1 = "il1"
+    Range("I1").Select
+    ActiveCell.FormulaR1C1 = "il2"
+    Range("J1").Select
+    ActiveCell.FormulaR1C1 = "il3"
+    Range("K1").Select
+    ActiveCell.FormulaR1C1 = "il4"
+    Range("L1").Select
+    ActiveCell.FormulaR1C1 = "il5"
+    Range("M1").Select
+    ActiveCell.FormulaR1C1 = "il6"
+    Range("N1").Select
+    ActiveCell.FormulaR1C1 = "ar1"
+    Range("O1").Select
+    ActiveCell.FormulaR1C1 = "ar2"
+    Range("P1").Select
+    ActiveCell.FormulaR1C1 = "ar3"
+    Range("Q1").Select
+    ActiveCell.FormulaR1C1 = "ar4"
+    Range("R1").Select
+    ActiveCell.FormulaR1C1 = "ar5"
+    Dim startDate As Date
+    Dim endDate As Date
+
+    Select Case Weekday(Now())
+        Case vbSunday
+            startDate = Format((Now() - 1) - Weekday(Now() - 1) + 1, "MM/DD/YY")
+            endDate = Format((Now() - 1) - Weekday(Now() - 1) + 7, "MM/DD/YY")
+        Case Else
+            startDate = Format(Date - Weekday(Date) + 1, "MM/DD/YY")
+            endDate = Format(Date - Weekday(Date) + 7, "MM/DD/YY")
+    End Select
+
+    Range("A2").Select
+    ActiveCell.FormulaR1C1 = startDate
+    Range("B2").Select
+    ActiveCell.FormulaR1C1 = endDate
+    Range("C2").Select
+    Sheets("Demographics").Select
+    Range("B13").Select
+    Selection.Copy
+    Sheets("TMDemographics").Select
+    Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+        False, Transpose:=False
+    Sheets("Demographics").Select
+    Range("B14").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Sheets("TMDemographics").Select
+    Range("D2").Select
+    Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+        False, Transpose:=False
+    Sheets("Education Level").Select
+    Range("B2").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Sheets("TMDemographics").Select
+    Range("E2").Select
+    Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+        False, Transpose:=False
+    Sheets("Education Level").Select
+    Range("B3").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Sheets("TMDemographics").Select
+    Range("F2").Select
+    Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+        False, Transpose:=False
+    Sheets("Education Level").Select
+    Range("B4").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Sheets("TMDemographics").Select
+    Range("G2").Select
+    Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+        False, Transpose:=False
+    Sheets("Income").Select
+    Range("B2").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Sheets("TMDemographics").Select
+    Range("H2").Select
+    Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+        False, Transpose:=False
+    Sheets("Income").Select
+    Range("B3").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Sheets("TMDemographics").Select
+    Range("I2").Select
+    Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+        False, Transpose:=False
+    Sheets("Income").Select
+    Range("B4").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Sheets("TMDemographics").Select
+    Range("J2").Select
+    Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+        False, Transpose:=False
+    Sheets("Income").Select
+    Range("B5").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Sheets("TMDemographics").Select
+    Range("K2").Select
+    Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+        False, Transpose:=False
+    Sheets("Income").Select
+    Range("B6").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Sheets("TMDemographics").Select
+    Range("L2").Select
+    Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+        False, Transpose:=False
+    Sheets("Income").Select
+    Range("B7").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Sheets("TMDemographics").Select
+    Range("M2").Select
+    Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+        False, Transpose:=False
+    Sheets("Age Range").Select
+    Range("B2").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Sheets("TMDemographics").Select
+    Range("N2").Select
+    Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+        False, Transpose:=False
+    Sheets("Age Range").Select
+    Range("B3").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Sheets("TMDemographics").Select
+    Range("O2").Select
+    Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+        False, Transpose:=False
+    Sheets("Age Range").Select
+    Range("B4").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Sheets("TMDemographics").Select
+    Range("P2").Select
+    Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+        False, Transpose:=False
+    Sheets("Age Range").Select
+    Range("B5").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Sheets("TMDemographics").Select
+    Range("Q2").Select
+    Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+        False, Transpose:=False
+    Sheets("Age Range").Select
+    Range("B6").Select
+    Application.CutCopyMode = False
+    Selection.Copy
+    Sheets("TMDemographics").Select
+    Range("R2").Select
+    Selection.PasteSpecial Paste:=xlValues, Operation:=xlNone, SkipBlanks:= _
+        False, Transpose:=False
+    Range("C2").Value = Range("C2").Value * 100
+    Range("D2").Value = Range("D2").Value * 100
+    Range("E2").Value = Range("E2").Value * 100
+    Range("F2").Value = Range("F2").Value * 100
+    Range("G2").Value = Range("G2").Value * 100
+    Range("H2").Value = Range("H2").Value * 100
+    Range("I2").Value = Range("I2").Value * 100
+    Range("J2").Value = Range("J2").Value * 100
+    Range("K2").Value = Range("K2").Value * 100
+    Range("L2").Value = Range("L2").Value * 100
+    Range("M2").Value = Range("M2").Value * 100
+    Range("N2").Value = Range("N2").Value * 100
+    Range("O2").Value = Range("O2").Value * 100
+    Range("P2").Value = Range("P2").Value * 100
+    Range("Q2").Value = Range("Q2").Value * 100
+    Range("R2").Value = Range("R2").Value * 100
+    Columns("A:B").Select
+    Selection.NumberFormat = "m/d/yy;@"
+
+End Sub
